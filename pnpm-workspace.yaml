@@ -1,0 +1,4 @@
+onlyBuiltDependencies:
+  - '@lydell/elm'
+  - '@tailwindcss/oxide'
+  - esbuild
