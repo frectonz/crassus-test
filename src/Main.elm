@@ -5,7 +5,7 @@ import Data exposing (countrySalaries)
 import Dict
 import FormatNumber exposing (format)
 import FormatNumber.Locales exposing (Decimals(..), usLocale)
-import Html exposing (Html, button, div, h1, h2, hr, input, label, option, p, select, span, text)
+import Html exposing (Html, br, button, div, h1, h2, hr, input, label, option, p, select, span, text)
 import Html.Attributes exposing (..)
 import Html.Events exposing (onClick, onInput)
 
@@ -94,9 +94,12 @@ view model =
     div [ class "w-screen h-screen mx-auto px-4 py-16 bg-[#f6f2ea] text-[#3f2e2b]" ]
         [ div [ class "text-center mb-16" ]
             [ h1 [ class "text-5xl md:text-7xl font-serif mb-6 text-[#3f2e2b]" ]
-                [ text "The Crassus", Html.br [] [], span [ class "text-[#d4a017]" ] [ text "Legion Test" ] ]
+                [ text "The Crassus", br [] [], span [ class "text-[#d4a017]" ] [ text "Legion Test" ] ]
             , p [ class "text-xl text-[#6c5e58] max-w-2xl mx-auto" ]
-                [ text "Marcus Licinius Crassus believed a man could only consider himself truly rich when his annual income could raise and maintain a Roman legion. Discover your imperial wealth." ]
+                [ text "Marcus Licinius Crassus believed a man could only consider himself truly rich when his annual income could raise and maintain a Roman legion."
+                , br [] []
+                , text "Discover your imperial wealth."
+                ]
             ]
         , case model.result of
             Just _ ->
